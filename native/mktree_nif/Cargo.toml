@@ -1,0 +1,17 @@
+[package]
+name = "mktree_nif"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+name = "mktree_nif"
+crate-type = ["cdylib"]
+
+[dependencies]
+rustler = "0.34.0"
+sha2 = "0.10.8"
+
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "abort"
