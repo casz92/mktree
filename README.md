@@ -51,11 +51,8 @@ is_valid = Mktree.verify_proof("tx3", proof, root)
 IO.puts("Proof validity for tx3: #{is_valid}")
 ```
 
-🛠️ Technologies Used
-🔹 Rust - Optimized NIF implementation 🔹 Elixir - BEAM integration for distributed systems 🔹 SHA256 - Cryptographic hashing for Merkle structures
-
-🧑‍💻 Contributing
+## 🧑‍💻 Contributing
 Contributions are welcome! Feel free to open issues or submit pull requests.
 
-⚖️ License
+## ⚖️ License
 This project is licensed under MIT License.
