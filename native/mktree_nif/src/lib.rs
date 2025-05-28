@@ -108,7 +108,7 @@ fn compute_root(leaves: Vec<String>) -> String {
     }
 
     // Hashear las hojas iniciales para obtener la primera capa de hashes
-    let mut hashed_leaves: Vec<String> = leaves.iter().map(|leaf| phash_leaf(leaf.clone())).collect();
+    let hashed_leaves: Vec<String> = leaves.iter().map(|leaf| phash_leaf(leaf.clone())).collect();
 
     let mut nodes = hashed_leaves; // Empezar con las hojas hasheadas
     // Continuar hasheando pares hasta que solo quede un nodo (la raíz)
@@ -222,4 +222,4 @@ fn generate_proof(leaves: Vec<String>, target_leaf: String) -> Vec<(String, bool
 
 // Inicialización de la librería Rustler para Elixir.
 // Se exponen las funciones NIF al módulo Elixir.Mktree.
-rustler::init!("Elixir.Mktree", [hash_leaf, build_tree, compute_root, verify_proof, generate_proof]);
+rustler::init!("Elixir.Mktree");
