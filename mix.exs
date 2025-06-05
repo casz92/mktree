@@ -1,10 +1,12 @@
 defmodule Mktree.MixProject do
   use Mix.Project
 
+  @version "0.1.1"
+
   def project do
     [
       app: :mktree,
-      version: "0.1.0",
+      version: @version,
       elixir: "~> 1.14",
       description: "A merkle tree implementation in Elixir with Rustler",
       package: package(),
@@ -29,11 +31,10 @@ defmodule Mktree.MixProject do
   defp package do
     [
       name: :mktree,
-      files: ["lib", "native", "mix.exs", "README.md", "LICENSE"],
+      files: ["lib", "native", "mix.exs", "README*", "LICENSE*", ".formatter.exs"],
       maintainers: ["Carlos Suarez"],
       licenses: ["MIT"],
-      links: %{"GitHub" => "https://github.com/casz92/mktree"},
-      files: ~w(lib mix.exs README.md LICENSE)
+      links: %{"GitHub" => "https://github.com/casz92/mktree"}
     ]
   end
 end
